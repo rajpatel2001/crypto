@@ -1,0 +1,359 @@
+$bg2: #21242d;
+$main-bg: #16171d;
+$gray-font: rgb(155, 155, 155);
+$gray-ruler: rgb(58, 58, 58);
+
+.favList {
+  padding: 50px 150px;
+  padding-top: 20px;
+  background: $main-bg;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .topContainer {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    .title {
+      font-size: 35px;
+      width: 100%;
+      margin-bottom: 40px;
+    }
+    .searchbar {
+      //   border: 2px solid red;
+      display: flex;
+      align-items: center;
+      //   height: 40px;
+      height: fit-content;
+      background: $bg2;
+      padding: 8px;
+      width: 360px;
+      border-radius: 10px;
+
+      input {
+        background: none;
+        border: none;
+        outline: none;
+        width: 200px;
+        padding: 5px;
+        margin-left: 5px;
+        color: $gray-font;
+
+        &::placeholder {
+          color: $gray-font;
+        }
+      }
+
+      .icon {
+        height: 30px;
+        width: 30px;
+        color: $gray-font;
+        // border: 2px solid red;
+
+        &.close {
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  .bottomContainer {
+    position: relative;
+    width: 100%;
+    table {
+      font-family: arial, sans-serif;
+      border-collapse: collapse;
+      width: 100%;
+      position: relative;
+      place-items: center;
+      // border: 2px solid red;
+
+      tr {
+        &:hover {
+          background-color: #313131;
+          cursor: pointer;
+        }
+        &.fieldNames:hover {
+          background: none;
+          cursor: auto;
+        }
+
+        th {
+          border-bottom: 2px solid $gray-ruler;
+          font-weight: 500;
+          color: $gray-font;
+          font-size: 18px;
+        }
+        td,
+        th {
+          text-align: right;
+          padding: 10px;
+          vertical-align: middle;
+          margin: 5px 0;
+
+          &:first-child {
+            text-align: start;
+          }
+
+          // &:nth-child(2) {
+          //   text-align: start;
+          // }
+          // &:last-child {
+          //   text-align: end;
+          // }
+
+          img {
+            height: 50px;
+            width: 50px;
+            margin-right: 10px;
+          }
+
+          &.signname {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-end;
+            .coinsign {
+              font-size: 20px;
+              font-weight: 500;
+            }
+            .coinname {
+              font-size: 12px;
+              color: $gray-font;
+              font-weight: 500;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  button {
+    padding: 10px 15px;
+    border: 2px solid $gray-ruler;
+    background: none;
+    color: $gray-font;
+    font-weight: 700;
+    font-size: 18px;
+    margin-top: 40px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all 500ms ease;
+    width: 200px;
+
+    &:hover {
+      border: 2px solid gold;
+      color: gold;
+    }
+  }
+}
+
+@media (max-width: 1400px) {
+  .favList {
+    padding: 0 100px;
+  }
+}
+
+@media (max-width: 1100px) {
+  .favList {
+    padding: 0 50px;
+
+    .topContainer {
+      // border: 2px solid red;
+      .title {
+        font-size: 35px;
+      }
+    }
+  }
+}
+
+@media (max-width: 850px) {
+  .favList {
+    padding: 0 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    // border: 2px solid red;
+
+    .topContainer {
+      // border: 2px solid red;
+      .title {
+        font-size: 35px;
+        margin-bottom: 20px;
+      }
+    }
+
+    .bottomContainer {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      width: 100%;
+      overflow-x: auto;
+      padding: 0;
+      margin: 0;
+      // border: 2px solid red;
+
+      table {
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        width: fit-content;
+        position: relative;
+        place-items: center;
+        margin: 0;
+        padding: 0;
+        // border: 2px solid red;
+
+        tr {
+          th {
+            font-size: 16px;
+          }
+          td,
+          th {
+            text-align: right;
+            padding: 10px;
+            vertical-align: middle;
+            margin: 0;
+
+            &:first-child {
+              text-align: start;
+            }
+            // &:nth-child(2) {
+            //   text-align: end;
+            // }
+            // &:last-child {
+            //   text-align: end;
+            // }
+            img {
+              height: 30px;
+              width: 30px;
+              margin-right: 0;
+            }
+
+            .icon {
+              margin-right: 10px;
+              font-size: 25px;
+              &.fav {
+                color: red;
+              }
+            }
+
+            // width: 100%;
+            &.signname {
+              // border: 2px solid red;
+              display: flex;
+              flex-direction: column;
+              align-items: flex-end;
+              justify-content: center;
+              .coinsign {
+                font-size: 18px;
+              }
+              .coinname {
+                font-size: 12px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 510px) {
+  .favList {
+    padding: 0 20px;
+
+    .topContainer {
+      // border: 2px solid red;
+      margin-top: 20px;
+      flex-direction: column;
+      .title {
+        font-size: 30px;
+      }
+      .searchbar {
+        // border: 2px solid red;
+        display: flex;
+        align-items: center;
+        //   height: 40px;
+        height: fit-content;
+        background: $bg2;
+        padding: 5px;
+        width: 100%;
+        border-radius: 5px;
+
+        input {
+          background: none;
+          border: none;
+          outline: none;
+          width: 150px;
+          padding: 5px;
+          margin-left: 5px;
+          color: $gray-font;
+
+          &::placeholder {
+            color: $gray-font;
+          }
+        }
+
+        .icon {
+          height: 25px;
+          width: 25px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 415px) {
+  .favList {
+    padding: 0 20px;
+    min-width: 330px;
+
+    .topContainer {
+      flex-direction: column;
+      .title {
+        font-size: 22px;
+        margin-bottom: 10px;
+      }
+      .searchbar {
+        // border: 2px solid red;
+        display: flex;
+        align-items: center;
+        //   height: 40px;
+        height: fit-content;
+        background: $bg2;
+        padding: 5px;
+        width: 100%;
+        border-radius: 5px;
+
+        input {
+          background: none;
+          border: none;
+          outline: none;
+          width: 100%;
+          padding: 5px;
+          margin-left: 5px;
+          color: $gray-font;
+
+          &::placeholder {
+            color: $gray-font;
+          }
+        }
+
+        .icon {
+          height: 20px;
+          width: 20px;
+        }
+      }
+    }
+
+    .button {
+      padding: 5px 8px;
+      font-size: 14px;
+      margin-top: 20px;
+      width: 150px;
+    }
+  }
+}

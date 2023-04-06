@@ -1,0 +1,403 @@
+$bg2: #21242d;
+$main-bg: #16171d;
+$gray-font: rgb(155, 155, 155);
+$gray-ruler: rgb(58, 58, 58);
+
+.newslist {
+  padding: 0 150px;
+  padding-top: 50px;
+  //   border: 2px solid red;
+  padding-bottom: 40px;
+  background: $main-bg;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: $main-bg;
+  min-height: 350px;
+
+  .topContainer {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    .title {
+      font-size: 40px;
+      width: 100%;
+      margin-bottom: 20px;
+    }
+    .searchbar {
+      //   border: 2px solid red;
+      display: flex;
+      align-items: center;
+      //   height: 40px;
+      height: fit-content;
+      background: $bg2;
+      padding: 8px;
+      width: 360px;
+      border-radius: 10px;
+
+      input {
+        background: none;
+        border: none;
+        outline: none;
+        width: 200px;
+        padding: 5px;
+        margin-left: 5px;
+        color: $gray-font;
+
+        &::placeholder {
+          color: $gray-font;
+        }
+      }
+
+      .icon {
+        height: 30px;
+        width: 30px;
+        color: $gray-font;
+        // border: 2px solid red;
+
+        &.close {
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  .newsListContainer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 80px;
+    // border: 2px solid red;
+    .news {
+      width: fit-content;
+      background-color: $bg2;
+      border-radius: 15px;
+      display: flex;
+      margin: 20px 0;
+      margin-bottom: 90px;
+      // border: 2px solid red;
+      position: relative;
+      cursor: pointer;
+
+      img {
+        height: 200px;
+        width: 350px;
+        object-fit: cover;
+        border-radius: 15px;
+      }
+
+      .detail {
+        padding: 5px 0;
+        position: absolute;
+        bottom: -75px;
+        width: 300px;
+        height: 170px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: $bg2;
+        // border: 2px solid red;
+        border-radius: 15px;
+        padding: 15px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+
+        .title {
+          font-size: 18px;
+          font-weight: 500;
+          text-align: justify;
+          margin: 5px 0;
+        }
+
+        .desc {
+          text-align: justify;
+          color: $gray-font;
+          margin: 5px 0;
+        }
+        .time {
+          font-size: 14px;
+          color: $gray-font;
+          font-weight: 700;
+          margin: 5px 0;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1400px) {
+  .newslist {
+    padding: 0 100px;
+    padding-top: 50px;
+    //   border: 2px solid red;
+    padding-bottom: 40px;
+
+    .topContainer {
+      // border: 2px solid red;
+      .title {
+        font-size: 35px;
+      }
+    }
+  }
+}
+
+@media (max-width: 1100px) {
+  .newslist {
+    padding: 0 50px;
+    padding-top: 50px;
+    //   border: 2px solid red;
+    padding-bottom: 40px;
+
+    .topContainer {
+      // border: 2px solid red;
+      .title {
+        font-size: 35px;
+      }
+    }
+  }
+}
+
+@media (max-width: 850px) {
+  .newslist {
+    padding: 0 50px;
+    padding-top: 20px;
+    //   border: 2px solid red;
+    padding-bottom: 90px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    // border: 2px solid red;
+
+    .topContainer {
+      // border: 2px solid red;
+      .title {
+        font-size: 35px;
+        margin-bottom: 20px;
+      }
+    }
+
+    .newsListContainer {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 40px;
+      // border: 2px solid red;
+      .news {
+        width: fit-content;
+        background-color: $bg2;
+        border-radius: 15px;
+        display: flex;
+        margin-bottom: 30px;
+        // border: 2px solid red;
+        position: relative;
+        cursor: pointer;
+
+        img {
+          height: 170px;
+          width: 280px;
+          object-fit: cover;
+          border-radius: 15px;
+        }
+
+        .detail {
+          padding: 5px 0;
+          position: absolute;
+          bottom: -75px;
+          width: 250px;
+          height: 170px;
+          left: 50%;
+          transform: translateX(-50%);
+          background: $bg2;
+          // border: 2px solid red;
+          border-radius: 15px;
+          padding: 15px;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-around;
+
+          .title {
+            font-size: 16px;
+            font-weight: 500;
+            text-align: justify;
+            margin: 5px 0;
+          }
+
+          .desc {
+            text-align: justify;
+            color: $gray-font;
+            margin: 5px 0;
+          }
+          .time {
+            font-size: 14px;
+            color: $gray-font;
+            font-weight: 700;
+            margin: 5px 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 510px) {
+  .newslist {
+    padding: 0 20px;
+    padding-top: 0px;
+    // border: 2px solid red;
+    padding-bottom: 90px;
+
+    .topContainer {
+      // border: 2px solid red;
+      margin-top: 20px;
+      flex-direction: column;
+      .title {
+        font-size: 30px;
+      }
+      .searchbar {
+        // border: 2px solid red;
+        display: flex;
+        align-items: center;
+        //   height: 40px;
+        height: fit-content;
+        background: $bg2;
+        padding: 5px;
+        width: 100%;
+        border-radius: 5px;
+
+        input {
+          background: none;
+          border: none;
+          outline: none;
+          width: 150px;
+          padding: 5px;
+          margin-left: 5px;
+          color: $gray-font;
+
+          &::placeholder {
+            color: $gray-font;
+          }
+        }
+
+        .icon {
+          height: 25px;
+          width: 25px;
+        }
+      }
+    }
+
+    .newsListContainer {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 80px;
+      // border: 2px solid red;
+      .news {
+        width: fit-content;
+        background-color: $bg2;
+        border-radius: 15px;
+        display: flex;
+        margin-bottom: 30px;
+        // border: 2px solid red;
+        position: relative;
+        cursor: pointer;
+
+        img {
+          height: 170px;
+          width: 280px;
+          object-fit: cover;
+          border-radius: 15px;
+        }
+
+        .detail {
+          padding: 5px 0;
+          position: absolute;
+          bottom: -75px;
+          width: 250px;
+          height: 170px;
+          left: 50%;
+          transform: translateX(-50%);
+          background: $bg2;
+          // border: 2px solid red;
+          border-radius: 15px;
+          padding: 15px;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-around;
+
+          .title {
+            font-size: 16px;
+            font-weight: 500;
+            text-align: justify;
+            margin: 5px 0;
+          }
+
+          .desc {
+            text-align: justify;
+            color: $gray-font;
+            margin: 5px 0;
+          }
+          .time {
+            font-size: 14px;
+            color: $gray-font;
+            font-weight: 700;
+            margin: 5px 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+@media (max-width: 415px) {
+  .newslist {
+    padding: 0 20px;
+    min-width: 330px;
+
+    .topContainer {
+      flex-direction: column;
+      .title {
+        font-size: 22px;
+        margin-bottom: 10px;
+      }
+      .searchbar {
+        // border: 2px solid red;
+        display: flex;
+        align-items: center;
+        //   height: 40px;
+        height: fit-content;
+        background: $bg2;
+        padding: 5px;
+        width: 100%;
+        border-radius: 5px;
+
+        input {
+          background: none;
+          border: none;
+          outline: none;
+          width: 100%;
+          padding: 5px;
+          margin-left: 5px;
+          color: $gray-font;
+
+          &::placeholder {
+            color: $gray-font;
+          }
+        }
+
+        .icon {
+          height: 20px;
+          width: 20px;
+        }
+      }
+    }
+
+    .newsListContainer{
+      padding-bottom: 90px;
+    }
+  }
+}

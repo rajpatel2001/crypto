@@ -1,0 +1,1278 @@
+$bg2: #21242d;
+$main-bg: #16171d;
+$gray-font: rgb(155, 155, 155);
+$gray-ruler: rgb(58, 58, 58);
+
+.profile {
+  position: relative;
+
+  .profileContainer {
+    padding: 0 150px;
+    padding-bottom: 50px;
+    background: $main-bg;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    display: flex;
+    width: 100%;
+    height: calc(100vh - 80px);
+    // border: 2px solid red;
+
+    .title {
+      font-size: 35px;
+      font-weight: 600;
+      width: 100%;
+      margin-bottom: 20px;
+      margin-top: 20px;
+    }
+
+    .container {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      // border: 2px solid red;
+
+      .left {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        // border: 2px solid red;
+        padding-top: 30px;
+
+        .profileUpdate {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border: 4px solid gold;
+          border-radius: 50%;
+          position: relative;
+
+          .lds-ripple {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: rgba(0, 0, 0, 0.4);
+            border-radius: 50%;
+
+            div {
+              position: absolute;
+              border: 4px solid #fff;
+              opacity: 1;
+              border-radius: 50%;
+              animation: lds-ripple 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+
+              :nth-child(2) {
+                animation-delay: -0.5s;
+              }
+            }
+          }
+
+          @keyframes lds-ripple {
+            0% {
+              width: 0;
+              height: 0;
+              opacity: 1;
+            }
+            100% {
+              width: 72px;
+              height: 72px;
+              opacity: 0;
+            }
+          }
+
+          img {
+            height: 350px;
+            width: 350px;
+            object-fit: cover;
+            border-radius: 50%;
+          }
+
+          > label {
+            border: 2px solid gold;
+            background: gold;
+            margin-bottom: 3px;
+            position: absolute;
+            cursor: pointer;
+            border-radius: 50%;
+            height: 50px;
+            width: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10px;
+            top: 55px;
+            right: 5px;
+
+            .uploadIcon {
+              font-size: 30px;
+              color: white;
+            }
+          }
+
+          input {
+            border: none;
+            min-width: 250px;
+            height: 25px;
+            border-bottom: 1px solid gray;
+            outline: none;
+            padding: 0 5px;
+          }
+        }
+        button {
+          width: 500px;
+          padding: 10px;
+          border-radius: 10px;
+          border: 2px solid gold;
+          background-color: gold;
+          color: $main-bg;
+          font-weight: 700;
+          font-size: 16px;
+          transition: all 500ms ease;
+          cursor: pointer;
+          margin-top: 20px;
+          // border: 2px solid red;
+
+          &:hover {
+            background: $main-bg;
+            letter-spacing: 3px;
+            color: gold;
+          }
+        }
+      }
+      .right {
+        // border: 2px solid red;
+        // width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .updateTitle {
+          font-size: 30px;
+          font-weight: 500;
+        }
+
+        form {
+          width: 500px;
+          .userUpdateItem {
+            // border: 2px solid red;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            width: 100%;
+            margin: 10px 0;
+
+            label {
+              font-size: 14px;
+              align-self: flex-start;
+              margin-bottom: 5px;
+            }
+
+            input {
+              width: 100%;
+              background: none;
+              padding: 10px;
+              color: white;
+              outline: none;
+              border: 2px solid gold;
+              border-radius: 10px;
+
+              &::placeholder {
+                color: $gray-font;
+              }
+            }
+          }
+
+          button {
+            width: 500px;
+            padding: 10px;
+            border-radius: 10px;
+            border: 2px solid gold;
+            background-color: gold;
+            color: $main-bg;
+            font-weight: 700;
+            font-size: 16px;
+            transition: all 500ms ease;
+            cursor: pointer;
+            margin-top: 20px;
+            // border: 2px solid red;
+
+            &:hover {
+              background: $main-bg;
+              letter-spacing: 3px;
+              color: gold;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1400px) {
+  .profile {
+    .profileContainer {
+      padding: 0 100px;
+      padding-bottom: 50px;
+      background: $main-bg;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      display: flex;
+      width: 100%;
+      height: calc(100vh - 80px);
+      // border: 2px solid red;
+
+      .title {
+        font-size: 35px;
+        font-weight: 600;
+        width: 100%;
+        margin-bottom: 20px;
+        margin-top: 20px;
+      }
+
+      .container {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        // border: 2px solid red;
+
+        .left {
+          width: 50%;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: space-between;
+          // border: 2px solid red;
+          padding-top: 30px;
+
+          .profileUpdate {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 4px solid gold;
+            border-radius: 50%;
+            position: relative;
+
+            .lds-ripple {
+              position: absolute;
+              width: 100%;
+              height: 100%;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              background: rgba(0, 0, 0, 0.4);
+              border-radius: 50%;
+
+              div {
+                position: absolute;
+                border: 4px solid #fff;
+                opacity: 1;
+                border-radius: 50%;
+                animation: lds-ripple 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+
+                :nth-child(2) {
+                  animation-delay: -0.5s;
+                }
+              }
+            }
+
+            @keyframes lds-ripple {
+              0% {
+                width: 0;
+                height: 0;
+                opacity: 1;
+              }
+              100% {
+                width: 72px;
+                height: 72px;
+                opacity: 0;
+              }
+            }
+
+            img {
+              height: 350px;
+              width: 350px;
+              object-fit: cover;
+              border-radius: 50%;
+            }
+
+            > label {
+              border: 2px solid gold;
+              background: gold;
+              margin-bottom: 3px;
+              position: absolute;
+              cursor: pointer;
+              border-radius: 50%;
+              height: 50px;
+              width: 50px;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              padding: 10px;
+              top: 55px;
+              right: 5px;
+
+              .uploadIcon {
+                font-size: 30px;
+                color: white;
+              }
+            }
+
+            input {
+              border: none;
+              min-width: 250px;
+              height: 25px;
+              border-bottom: 1px solid gray;
+              outline: none;
+              padding: 0 5px;
+            }
+          }
+          button {
+            width: 400px;
+            padding: 10px;
+            border-radius: 10px;
+            border: 2px solid gold;
+            background-color: gold;
+            color: $main-bg;
+            font-weight: 700;
+            font-size: 16px;
+            transition: all 500ms ease;
+            cursor: pointer;
+            margin-top: 20px;
+            // border: 2px solid red;
+
+            &:hover {
+              background: $main-bg;
+              letter-spacing: 3px;
+              color: gold;
+            }
+          }
+        }
+        .right {
+          // border: 2px solid red;
+          // width: 50%;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          .updateTitle {
+            font-size: 30px;
+            font-weight: 500;
+          }
+
+          form {
+            width: 400px;
+            .userUpdateItem {
+              // border: 2px solid red;
+              display: flex;
+              align-items: center;
+              flex-direction: column;
+              width: 100%;
+              margin: 10px 0;
+
+              label {
+                font-size: 14px;
+                align-self: flex-start;
+                margin-bottom: 5px;
+              }
+
+              input {
+                width: 100%;
+                background: none;
+                padding: 10px;
+                color: white;
+                outline: none;
+                border: 2px solid gold;
+                border-radius: 10px;
+
+                &::placeholder {
+                  color: $gray-font;
+                }
+              }
+            }
+
+            button {
+              width: 400px;
+              padding: 10px;
+              border-radius: 10px;
+              border: 2px solid gold;
+              background-color: gold;
+              color: $main-bg;
+              font-weight: 700;
+              font-size: 16px;
+              transition: all 500ms ease;
+              cursor: pointer;
+              margin-top: 20px;
+              // border: 2px solid red;
+
+              &:hover {
+                background: $main-bg;
+                letter-spacing: 3px;
+                color: gold;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1100px) {
+  .profile {
+    .profileContainer {
+      padding: 0 50px;
+      padding-bottom: 50px;
+      background: $main-bg;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      display: flex;
+      width: 100%;
+      height: calc(100vh - 80px);
+      // border: 2px solid red;
+
+      .title {
+        font-size: 35px;
+        font-weight: 600;
+        width: 100%;
+        margin-bottom: 20px;
+        margin-top: 20px;
+      }
+
+      .container {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        // border: 2px solid red;
+
+        .left {
+          width: 50%;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: space-between;
+          // border: 2px solid red;
+          padding-top: 30px;
+
+          .profileUpdate {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 4px solid gold;
+            border-radius: 50%;
+            position: relative;
+
+            .lds-ripple {
+              position: absolute;
+              width: 100%;
+              height: 100%;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              background: rgba(0, 0, 0, 0.4);
+              border-radius: 50%;
+
+              div {
+                position: absolute;
+                border: 4px solid #fff;
+                opacity: 1;
+                border-radius: 50%;
+                animation: lds-ripple 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+
+                :nth-child(2) {
+                  animation-delay: -0.5s;
+                }
+              }
+            }
+
+            @keyframes lds-ripple {
+              0% {
+                width: 0;
+                height: 0;
+                opacity: 1;
+              }
+              100% {
+                width: 72px;
+                height: 72px;
+                opacity: 0;
+              }
+            }
+
+            img {
+              height: 300px;
+              width: 300px;
+              object-fit: cover;
+              border-radius: 50%;
+            }
+
+            > label {
+              border: 2px solid gold;
+              background: gold;
+              margin-bottom: 3px;
+              position: absolute;
+              cursor: pointer;
+              border-radius: 50%;
+              height: 50px;
+              width: 50px;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              padding: 10px;
+              top: 50px;
+              right: 0px;
+
+              .uploadIcon {
+                font-size: 30px;
+                color: white;
+              }
+            }
+
+            input {
+              border: none;
+              min-width: 250px;
+              height: 25px;
+              border-bottom: 1px solid gray;
+              outline: none;
+              padding: 0 5px;
+            }
+          }
+          button {
+            width: 400px;
+            padding: 10px;
+            border-radius: 10px;
+            border: 2px solid gold;
+            background-color: gold;
+            color: $main-bg;
+            font-weight: 700;
+            font-size: 16px;
+            transition: all 500ms ease;
+            cursor: pointer;
+            margin-top: 20px;
+            // border: 2px solid red;
+
+            &:hover {
+              background: $main-bg;
+              letter-spacing: 3px;
+              color: gold;
+            }
+          }
+        }
+        .right {
+          // border: 2px solid red;
+          // width: 50%;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          .updateTitle {
+            font-size: 30px;
+            font-weight: 500;
+          }
+
+          form {
+            width: 400px;
+            .userUpdateItem {
+              // border: 2px solid red;
+              display: flex;
+              align-items: center;
+              flex-direction: column;
+              width: 100%;
+              margin: 10px 0;
+
+              label {
+                font-size: 14px;
+                align-self: flex-start;
+                margin-bottom: 5px;
+              }
+
+              input {
+                width: 100%;
+                background: none;
+                padding: 10px;
+                color: white;
+                outline: none;
+                border: 2px solid gold;
+                border-radius: 10px;
+
+                &::placeholder {
+                  color: $gray-font;
+                }
+              }
+            }
+
+            button {
+              width: 400px;
+              padding: 10px;
+              border-radius: 10px;
+              border: 2px solid gold;
+              background-color: gold;
+              color: $main-bg;
+              font-weight: 700;
+              font-size: 16px;
+              transition: all 500ms ease;
+              cursor: pointer;
+              margin-top: 20px;
+              // border: 2px solid red;
+
+              &:hover {
+                background: $main-bg;
+                letter-spacing: 3px;
+                color: gold;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 910px) {
+  .profile {
+    .profileContainer {
+      padding: 0 50px;
+      padding-bottom: 50px;
+      background: $main-bg;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      display: flex;
+      width: 100%;
+      height: fit-content;
+      // border: 2px solid red;
+
+      .title {
+        font-size: 35px;
+        font-weight: 600;
+        width: 100%;
+        margin-bottom: 20px;
+        margin-top: 20px;
+      }
+
+      .container {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        // border: 2px solid red;
+
+        .left {
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: space-between;
+          // border: 2px solid red;
+          padding-top: 30px;
+          margin-bottom: 20px;
+
+          .profileUpdate {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 4px solid gold;
+            border-radius: 50%;
+            position: relative;
+
+            .lds-ripple {
+              position: absolute;
+              width: 100%;
+              height: 100%;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              background: rgba(0, 0, 0, 0.4);
+              border-radius: 50%;
+
+              div {
+                position: absolute;
+                border: 4px solid #fff;
+                opacity: 1;
+                border-radius: 50%;
+                animation: lds-ripple 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+
+                :nth-child(2) {
+                  animation-delay: -0.5s;
+                }
+              }
+            }
+
+            @keyframes lds-ripple {
+              0% {
+                width: 0;
+                height: 0;
+                opacity: 1;
+              }
+              100% {
+                width: 72px;
+                height: 72px;
+                opacity: 0;
+              }
+            }
+
+            img {
+              height: 300px;
+              width: 300px;
+              object-fit: cover;
+              border-radius: 50%;
+            }
+
+            > label {
+              border: 2px solid gold;
+              background: gold;
+              margin-bottom: 3px;
+              position: absolute;
+              cursor: pointer;
+              border-radius: 50%;
+              height: 50px;
+              width: 50px;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              padding: 10px;
+              top: 50px;
+              right: 0px;
+
+              .uploadIcon {
+                font-size: 30px;
+                color: white;
+              }
+            }
+
+            input {
+              border: none;
+              min-width: 250px;
+              height: 25px;
+              border-bottom: 1px solid gray;
+              outline: none;
+              padding: 0 5px;
+            }
+          }
+          button {
+            width: 400px;
+            padding: 10px;
+            border-radius: 10px;
+            border: 2px solid gold;
+            background-color: gold;
+            color: $main-bg;
+            font-weight: 700;
+            font-size: 16px;
+            transition: all 500ms ease;
+            cursor: pointer;
+            margin-top: 20px;
+            // border: 2px solid red;
+
+            &:hover {
+              background: $main-bg;
+              letter-spacing: 3px;
+              color: gold;
+            }
+          }
+        }
+        .right {
+          // border: 2px solid red;
+          // width: 50%;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          .updateTitle {
+            font-size: 30px;
+            font-weight: 500;
+          }
+
+          form {
+            width: 400px;
+            .userUpdateItem {
+              // border: 2px solid red;
+              display: flex;
+              align-items: center;
+              flex-direction: column;
+              width: 100%;
+              margin: 10px 0;
+
+              label {
+                font-size: 14px;
+                align-self: flex-start;
+                margin-bottom: 5px;
+              }
+
+              input {
+                width: 100%;
+                background: none;
+                padding: 10px;
+                color: white;
+                outline: none;
+                border: 2px solid gold;
+                border-radius: 10px;
+
+                &::placeholder {
+                  color: $gray-font;
+                }
+              }
+            }
+
+            button {
+              width: 400px;
+              padding: 10px;
+              border-radius: 10px;
+              border: 2px solid gold;
+              background-color: gold;
+              color: $main-bg;
+              font-weight: 700;
+              font-size: 16px;
+              transition: all 500ms ease;
+              cursor: pointer;
+              margin-top: 20px;
+              // border: 2px solid red;
+
+              &:hover {
+                background: $main-bg;
+                letter-spacing: 3px;
+                color: gold;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 510px) {
+  .profile {
+    .profileContainer {
+      padding: 0 20px;
+      padding-bottom: 50px;
+      background: $main-bg;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      display: flex;
+      width: 100%;
+      height: fit-content;
+      // border: 2px solid red;
+
+      .title {
+        font-size: 30px;
+        font-weight: 600;
+        width: 100%;
+        margin-bottom: 20px;
+        margin-top: 20px;
+      }
+
+      .container {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        // border: 2px solid red;
+
+        .left {
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: space-between;
+          // border: 2px solid red;
+          padding-top: 30px;
+          margin-bottom: 20px;
+
+          .profileUpdate {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 4px solid gold;
+            border-radius: 50%;
+            position: relative;
+
+            .lds-ripple {
+              position: absolute;
+              width: 100%;
+              height: 100%;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              background: rgba(0, 0, 0, 0.4);
+              border-radius: 50%;
+
+              div {
+                position: absolute;
+                border: 4px solid #fff;
+                opacity: 1;
+                border-radius: 50%;
+                animation: lds-ripple 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+
+                :nth-child(2) {
+                  animation-delay: -0.5s;
+                }
+              }
+            }
+
+            @keyframes lds-ripple {
+              0% {
+                width: 0;
+                height: 0;
+                opacity: 1;
+              }
+              100% {
+                width: 72px;
+                height: 72px;
+                opacity: 0;
+              }
+            }
+
+            img {
+              height: 300px;
+              width: 300px;
+              object-fit: cover;
+              border-radius: 50%;
+            }
+
+            > label {
+              border: 2px solid gold;
+              background: gold;
+              margin-bottom: 3px;
+              position: absolute;
+              cursor: pointer;
+              border-radius: 50%;
+              height: 50px;
+              width: 50px;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              padding: 10px;
+              top: 50px;
+              right: 0px;
+
+              .uploadIcon {
+                font-size: 30px;
+                color: white;
+              }
+            }
+
+            input {
+              border: none;
+              min-width: 250px;
+              height: 25px;
+              border-bottom: 1px solid gray;
+              outline: none;
+              padding: 0 5px;
+            }
+          }
+          button {
+            width: 100%;
+            padding: 10px;
+            border-radius: 10px;
+            border: 2px solid gold;
+            background-color: gold;
+            color: $main-bg;
+            font-weight: 700;
+            font-size: 16px;
+            transition: all 500ms ease;
+            cursor: pointer;
+            margin-top: 20px;
+            // border: 2px solid red;
+
+            &:hover {
+              background: $main-bg;
+              letter-spacing: 3px;
+              color: gold;
+            }
+          }
+        }
+        .right {
+          // border: 2px solid red;
+          // width: 50%;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          .updateTitle {
+            font-size: 30px;
+            font-weight: 500;
+          }
+
+          form {
+            width: 100%;
+            .userUpdateItem {
+              // border: 2px solid red;
+              display: flex;
+              align-items: center;
+              flex-direction: column;
+              width: 100%;
+              margin: 10px 0;
+
+              label {
+                font-size: 14px;
+                align-self: flex-start;
+                margin-bottom: 5px;
+              }
+
+              input {
+                width: 100%;
+                background: none;
+                padding: 10px;
+                color: white;
+                outline: none;
+                border: 2px solid gold;
+                border-radius: 10px;
+
+                &::placeholder {
+                  color: $gray-font;
+                }
+              }
+            }
+
+            button {
+              width: 100%;
+              padding: 10px;
+              border-radius: 10px;
+              border: 2px solid gold;
+              background-color: gold;
+              color: $main-bg;
+              font-weight: 700;
+              font-size: 16px;
+              transition: all 500ms ease;
+              cursor: pointer;
+              margin-top: 20px;
+              // border: 2px solid red;
+
+              &:hover {
+                background: $main-bg;
+                letter-spacing: 3px;
+                color: gold;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 415px) {
+  .profile {
+    .profileContainer {
+      padding: 0 20px;
+      padding-bottom: 50px;
+      background: $main-bg;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      display: flex;
+      height: fit-content;
+      width: auto;
+      min-width: 330px;
+      // border: 2px solid red;
+
+      .title {
+        font-size: 22px;
+        font-weight: 600;
+        width: 100%;
+        margin-bottom: 20px;
+        margin-top: 20px;
+      }
+
+      .container {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        // border: 2px solid red;
+
+        .left {
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: space-between;
+          // border: 2px solid red;
+          padding-top: 30px;
+          margin-bottom: 20px;
+
+          .profileUpdate {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 4px solid gold;
+            border-radius: 50%;
+            position: relative;
+
+            .lds-ripple {
+              position: absolute;
+              width: 100%;
+              height: 100%;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              background: rgba(0, 0, 0, 0.4);
+              border-radius: 50%;
+
+              div {
+                position: absolute;
+                border: 4px solid #fff;
+                opacity: 1;
+                border-radius: 50%;
+                animation: lds-ripple 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+
+                :nth-child(2) {
+                  animation-delay: -0.5s;
+                }
+              }
+            }
+
+            @keyframes lds-ripple {
+              0% {
+                width: 0;
+                height: 0;
+                opacity: 1;
+              }
+              100% {
+                width: 72px;
+                height: 72px;
+                opacity: 0;
+              }
+            }
+
+            img {
+              height: 250px;
+              width: 250px;
+              object-fit: cover;
+              min-width: 250px;
+              border-radius: 50%;
+            }
+
+            > label {
+              border: 2px solid gold;
+              background: gold;
+              margin-bottom: 3px;
+              position: absolute;
+              cursor: pointer;
+              border-radius: 50%;
+              height: 50px;
+              width: 50px;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              padding: 10px;
+              top: 50px;
+              right: 0px;
+
+              .uploadIcon {
+                font-size: 30px;
+                color: white;
+              }
+            }
+
+            input {
+              border: none;
+              min-width: 250px;
+              height: 25px;
+              border-bottom: 1px solid gray;
+              outline: none;
+              padding: 0 5px;
+            }
+          }
+          button {
+            width: 100%;
+            padding: 10px;
+            border-radius: 10px;
+            border: 2px solid gold;
+            background-color: gold;
+            color: $main-bg;
+            font-weight: 700;
+            font-size: 16px;
+            transition: all 500ms ease;
+            cursor: pointer;
+            margin-top: 20px;
+            // border: 2px solid red;
+
+            &:hover {
+              background: $main-bg;
+              letter-spacing: 3px;
+              color: gold;
+            }
+          }
+        }
+        .right {
+          // border: 2px solid red;
+          // width: 50%;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          .updateTitle {
+            font-size: 22px;
+            font-weight: 500;
+          }
+
+          form {
+            width: 100%;
+            .userUpdateItem {
+              // border: 2px solid red;
+              display: flex;
+              align-items: center;
+              flex-direction: column;
+              width: 100%;
+              margin: 10px 0;
+
+              label {
+                font-size: 14px;
+                align-self: flex-start;
+                margin-bottom: 5px;
+              }
+
+              input {
+                width: 100%;
+                background: none;
+                padding: 10px;
+                color: white;
+                outline: none;
+                border: 2px solid gold;
+                border-radius: 10px;
+
+                &::placeholder {
+                  color: $gray-font;
+                }
+              }
+            }
+
+            button {
+              width: 100%;
+              padding: 10px;
+              border-radius: 10px;
+              border: 2px solid gold;
+              background-color: gold;
+              color: $main-bg;
+              font-weight: 700;
+              font-size: 16px;
+              transition: all 500ms ease;
+              cursor: pointer;
+              margin-top: 20px;
+              // border: 2px solid red;
+
+              &:hover {
+                background: $main-bg;
+                letter-spacing: 3px;
+                color: gold;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
